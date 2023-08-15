@@ -1,0 +1,6 @@
+##Ranking using over()
+select productName,
+       UnitProce,
+       Rank() over(order by UnitPrice DESC) as [priceRank]
+from PRoducts
+order by unit Price DESC
