@@ -30,3 +30,13 @@ column 3 int,
 column 4 int)
 create index ix_table3_column3
 on table 3 (column3 ASC)
+
+to find the indexes present in a table we can use the store proceedure
+sp_helpIndex table_name
+this will list the indexes present in the entered table 
+
+we can also drop the index that we have created using drop
+drop index tablename.indexname
+
+we can also create index manuals through uX
+by clicking the index ->new index->enter the anme of the index and type(clustred or non clustered, unique or non unique)
