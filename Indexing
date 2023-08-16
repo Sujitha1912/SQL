@@ -2,7 +2,8 @@
 It is used to reduce the time of table scan in a Database. if the database is large Having an Index will reduce the time drastically
 when we create a primary key while creating the table, It automatically acts as an Index by default.
 we can also exclusively create an index for a column using the word "index" while creating the table. 
-we can also assign an index to a preexisting tables column too. 
+we can also assign an index to a preexisting tables column too. Indexing is similar to indexes in a book. It helps in identifying the required data(row Address) easily without the need of scanning the entire table.
+
 
 for example 
 1) by default 
