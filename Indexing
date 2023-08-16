@@ -1,0 +1,31 @@
+## Indexing 
+It is used to reduce the time of table scan in a Database. if the database is large Having an Index will reduce the time drastically
+when we create a primary key while creating the table, It automatically acts as an Index by default.
+we can also exclusively create an index for a column using the word "index" while creating the table. 
+we can also assign an index to a preexisting tables column too. 
+
+for example 
+1) by default 
+create table table1
+(column 1  int NOT NUll primary key,
+column 2 varchar(20))
+where column 1 by default becomes an index as it is the primary key for the table
+
+2) exclusive Manual index entry
+create table table 2
+(column 1 int not null Primary Key,
+column 2 varchar (20),
+column 3 int,
+column 4 int,
+index column 3 (column 2,column 4)
+)
+where column 1(by default) and column 3 by "index" becomes the index to table 2
+
+3)creating index after creating the table
+create table table 3
+(column 1 int not null Primary Key,
+column 2 varchar (20),
+column 3 int,
+column 4 int)
+create index ix_table3_column3
+on table 3 (column3 ASC)
