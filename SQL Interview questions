@@ -1,5 +1,5 @@
 #SQL Interview Questions with examples:
-### Order of execution:
+### Order of execution: (logical processing order in a SQL query)
 f w g h s o l
 f- from 
 w- where
