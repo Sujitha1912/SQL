@@ -1,2 +1,15 @@
-##SQL Interview Questions with examples:
-1) what is the difference between having and where clause?
+#SQL Interview Questions with examples:
+### Order of execution:
+f w g h s o l
+f- from 
+w- where
+g-group by
+h-having 
+s-select
+o-order by
+l-limit
+
+### 1) what is the difference between having and where clause?
+They are both used for filtering, "where" is used to filter individual rows in a table on basis of a given condition, whereas "having" is used to filter groups, 
+so normally "having" clause will have a group by with an aggregate function. 
+Example:
