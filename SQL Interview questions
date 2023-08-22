@@ -13,3 +13,15 @@ l-limit
 They are both used for filtering, "where" is used to filter individual rows in a table on basis of a given condition, whereas "having" is used to filter groups, 
 so normally "having" clause will have a group by with an aggregate function. 
 Example:
+
+Where :
+select column1,column2 
+from table 1
+where [logical condition]
+
+having:
+select column 1, column 2 
+from table 1 
+group by column 1
+having [condition]
+order by column 2
