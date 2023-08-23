@@ -25,3 +25,12 @@ from table 1
 group by column 1
 having [condition]
 order by column 2
+
+## indexing: 
+indexing in SQL is similar to a book index. indexing reduces the table scan time. before indexing the data in the database is just a heap of data.
+indexing is used to properly ordeva data. 
+one of the indexing is through assigning a primary key to the table. primary key are the keys that are not null and unique to the table. 
+we can also creat indexing by making any column a unique column. 
+this man made unique keys can have null values. this can be dobe by using the constraints unique.
+when we speak about indexing.there are two main types pf it. 
+its clustered and non clustered.
