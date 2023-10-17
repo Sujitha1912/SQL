@@ -1,0 +1,32 @@
+-- CTE to calculate average order total and quantity
+WITH avg_order(total, quantity) AS (
+  SELECT
+    AVG(total),
+    AVG(quantity)
+  FROM
+    orders
+  WHERE
+    -- exclude test orders
+    product_id > 10
+    AND -- exclude orders before launch
+    created_at > '2016-04-21'
+    AND -- exclude test accounts
+    user_id > 10
+)
+
+-- orders with above-average totals
+SELECT
+  o.id,
+  o.total,
+  o.quantity
+FROM
+  orders AS o -- join the CTE avg_order
+  LEFT JOIN avg_order AS a
+WHERE
+  -- above-average total
+  o.total > a.total
+  -- below-average quantity
+  AND o.quantity < a.quantity
+ORDER BY
+  o.total DESC,
+  o.quantity ASC
